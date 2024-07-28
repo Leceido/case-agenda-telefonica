@@ -48,6 +48,7 @@ Configure o Ambiente:
 
 Crie um arquivo .env baseado no .env.example.
 Configure as informações de conexão com o banco de dados.
+#Eu forneço as credenciais do bucket S3 da AWS, só solicitar no discord leceido, por email leceido@gmail.com ou whatsapp 1194299-2076
 Execute as Migrations
 
 php artisan migrate:fresh
