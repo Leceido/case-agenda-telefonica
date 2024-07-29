@@ -63,7 +63,7 @@ FILESYSTEM_DISK=s3
 ```
 Adicione o campo JWT_TTL=null no .env
 ```
-JWT_TTL=null
+JWT_TLL=null
 ```
 Execute mais esses dois codigos
 ```
