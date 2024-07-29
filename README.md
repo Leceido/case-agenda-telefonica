@@ -34,37 +34,67 @@ Pinia: Gerenciamento de estado.
 NPM ou Yarn: Gerenciadores de pacotes JavaScript.
 
 
-Instalação
+# Instalação
 Clone o Repositório:
+```
 git clone https://github.com/Leceido/case-agenda-telefonica.git
-
+```
 
 Instale as Dependências (Back-end):
-
+```
 cd agenda-telefonica-api
+```
+```
 composer install
+```
 
-Configure o Ambiente:
+## Configure o Ambiente:
 
 Crie um arquivo .env baseado no .env.example.
 Configure as informações de conexão com o banco de dados.
-#Eu forneço as credenciais do bucket S3 da AWS, só solicitar no discord leceido, por email leceido@gmail.com ou whatsapp 1194299-2076
+
+Necessário criar um banco em MySQL no localhost
+
+# Eu forneço as credenciais do bucket S3 da AWS, só solicitar no discord leceido, por email leceido@gmail.com ou whatsapp 1194299-2076
+
+Altere o campo FILESYSTEM_DISK no .env para s3
+```
+FILESYSTEM_DISK=s3
+```
+Adicione o campo JWT_TTL=null no .env
+```
+JWT_TTL=null
+```
+Execute mais esses dois codigos
+```
+php artisan jwt:secret
+```
+```
+php artisan key:generate
+```
+
 Execute as Migrations
-
+```
 php artisan migrate:fresh
+```
 
-Instale as Dependências (Front-end):
-
+Instale as Dependências (Front-end) e Inicie o Servidor de Desenvolvimento:
+```
 cd agenda-telefonica
+```
+```
 npm install ou yarn install
-
-
+```
+```
 npm run dev ou yarn run dev
+```
+```
 php artisan serve
-Inicie o Servidor de Desenvolvimento:
+```
 
 
-Estrutura do Projeto
+
+## Estrutura do Projeto
 app: Lógica principal do Laravel (models, controllers, etc.).
 bootstrap: Arquivos de inicialização.
 config: Arquivos de configuração.
