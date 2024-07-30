@@ -121,7 +121,7 @@ export default {
                 <div class="bg-gray-50 rounded-lg p-2">
                     <div>
                         Telefone:
-                        <input class="p-2 bg-gray-50 w-3/4" type="text" min="1" max="15" name="phone" id="phone" v-model="phoneForm">
+                        <input v-mask="['(##) ####-####', '(##) #####-####']" class="p-2 bg-gray-50 w-3/4" type="text" min="1" max="15" name="phone" id="phone" v-model="phoneForm">
                     </div>
                 </div>
                 <div class="bg-gray-50 rounded-lg p-2">

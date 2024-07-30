@@ -18,6 +18,7 @@ import MessageComponent from '../MessageComponent.vue';
                         method: 'POST',
                         headers: {
                             'Content-type': 'application/json',
+                            'Accept': 'application/json',
                         },
                         body: JSON.stringify({
                             'name': this.name,

@@ -6,11 +6,15 @@ import router from './router'
 import {createPinia} from 'pinia';
 import {useContactIdStore} from '@/stores/ContactIdStore'
 import { useAuth } from './stores/AuthStore';
+import VueTheMask from 'vue-the-mask'
+
 
 const pinia = createPinia()
 const app = createApp(App)
 
 app.use(pinia)
+
+app.use(VueTheMask)
 
 app.use(router)
 
